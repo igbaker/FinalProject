@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myToolbar"/>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_profile"
+                android:textSize="32dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_name"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/enter_name"
+                android:autofillHints="@string/enter_name"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_email"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/enter_email"
+                android:autofillHints="@string/enter_email"/>
+            <Button
+                android:id="@+id/news_reader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/NewsReader"
+                android:backgroundTint="@color/teal_700"/>
+            <Button
+                android:id="@+id/favourites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Favourites"
+                android:backgroundTint="@color/teal_700"/>
+            <ProgressBar
+                android:id="@+id/bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:minWidth="200dp"
+                android:max="100"
+                android:indeterminate="false"
+                android:progress="0" />
+
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/navigation_drawer_menu"
+            android:id="@+id/nav_view"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    //toolbar clickable icons
+
+    <item
+        android:id="@+id/menu1"
+        android:title="Home"
+        android:icon='@drawable/home'
+        android:orderInCategory="200"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu2"
+        android:title="Info"
+        android:icon='@drawable/info'
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+
+
+</menu>
